@@ -1,8 +1,8 @@
 #include "sort.h"
 
 /**
- * bubble_sort - bubble sort
- * @array: array of integers
+ * bubble_sort - Sorts an array of integers using Bubble sort algorithm
+ * @array: array of integers to be sorted
  * @size: size of array
  *
  * Return: None
@@ -10,25 +10,25 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j, p1, p2;
-	size_t size2 = size;
+	size_t i, j;
+	int temp;
 
-	if (array == NULL || size == 0 || size < 2)
+	if (array == NULL)
 		return;
-	for (i = 0; i < size - 1; i += 1)
-	{
-		for (j = 0; j < size2 - i - 1; j += 1)
-		{
-			p1 = array[j];
-			p2 = array[j + 1];
-			if (p1 > p2)
-			{
-				int temp = p1;
 
-				p1 = p2;
-				p2 = temp;
-				array[j] = p1;
-				array[j + 1] = p2;
+	for (i = 0; i < size - 1; i++)
+
+	{
+		for (j = 0; j < size - i - 1; j++)
+
+		{
+			if (array[j] > array[j + 1])
+
+			{
+				temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
+
 				print_array(array, size);
 			}
 		}
