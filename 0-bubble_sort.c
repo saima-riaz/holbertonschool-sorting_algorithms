@@ -2,15 +2,15 @@
 
 /**
  * bubble_sort - bubble sort
- * @arry: array of integers
- * @size: size of arry
+ * @array: array of integers
+ * @size: size of array
  *
  * Return: None
  */
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, j, p1,p2;
+	size_t i, j, p1, p2;
 	size_t size2 = size;
 
 	if (array == NULL || size == 0 || size < 2)
@@ -24,6 +24,7 @@ void bubble_sort(int *array, size_t size)
 			if (p1 > p2)
 			{
 				int temp = p1;
+
 				p1 = p2;
 				p2 = temp;
 				array[j] = p1;
