@@ -18,9 +18,8 @@ void insertion_sort_list(listint_t **list)
 	{
 		a = end->prev;
 		b = end;
-		end = end ->next;
+		end = end->next;
 
-		// Check for NULL pointers before dereferencing
 		while (a && a->n > b->n)
 
 		{
@@ -37,7 +36,6 @@ void insertion_sort_list(listint_t **list)
 			a->prev = b;
 			b->next = a;
 
-			// Print the list after each swap for visualization
 			print_list(*list);
 
 			a = b->prev;
